@@ -1,0 +1,97 @@
+\chapter{Locatie gegevens bepalen}
+\label{ch:locatiegegevensbepalen}
+In dit hoofdstuk bespreken we alle mogelijke manieren om locatie gegevens op te halen.
+Dit zal ons helpen met de volgende hoofdstukken. 
+Eerst zal besproken worden hoe dit wordt gedaan in IOS.
+Daarna Android.
+En dan nog een paar andere manieren.
+
+\section{IOS}
+\label{sec: ios}
+In IOS worden locatie gegevens opgehaald door de klasses van de Core Location Framework.
+
+~\textcite{IosLocFramework} (is deze reference wel correct?)
+
+~\autocite{IosLocFramework}
+
+Dit framework biedt een aantal services om de locatie van het apparaat te bepalen.
+Eerst is er de 'standaard locatie service' die een sterk configureerbare manier biedt om de huidige locatie en wijzigingen te bepalen. Daarnaast is er ook nog de 'Region monitoring' (gebeids controle) die controleert wanneer u een  voor-gedefinieerd geografisch gebeid of Bluetooth-beaconregio (later meer over deze beacon) kruist. Als laatste is er de 'significant-change location service' die de huidige locatie bepaalt en een melding geeft als er een verandering optreedt. Het framework maakt gebruik van alle hardware (Wi-Fi, GPS, Bleutooth, magnetomater, Barometer en cellular hardware) die in de smartphone zit om de locatie te bepalen. (In hoofdstuk xx meer uitleg over hoe deze hardware de locatie kan bepalen)
+
+Voorbeeld code ook tonen + uitleg van de code of niet? hangt af van hoeveel andere zaken ik al dan niet heb.
+Bij elke service is er altijd een duidelijk voorbeeld dat kan weergegeven worden
+
+\subsection{Standard location service}
+\label{subsec: standaardlocService}
+
+De standaard locatie service is de meest gebruikte manier om de huidige locatie van de gebruiker te bepalen. De nauwkeurigheid van de data en afstand die moet afgelegd worden voor een nieuwe locatie te melden, moeten vooraf bepaald worden. De service bepaalt aan de hand van deze parameters welke hardware gebruikt zal worden. Omdat de service rekening houdt met deze parameters is deze het meest geschikt voor apps die meer precisie op de locatie gegevens en controle op locatie verandering nodig hebben. Het nadeel van deze service is het verbruik, dat sterk kan oplopen aangezien het nodig is dat de locatie-bepaling hardware voor lange periodes aan staat. Voorbeelden van apps die het best gebruik maken van deze service zijn fitness of navigatie applicaties. (volledige route ,  background, ...)
+
+Voorbeeld code of iets dergelijk tonen?
+
+
+
+
+\subsection{Significant-change location service}
+\label{subsec: significantchangelocService}
+Als de nauwkeurigheid niet belangrijk is en er is geen nood aan continu (gevolgd, ander woord) te worden, dan is de significant-change location service (nodig... uw ding, idk). Het is wel belangrijk dat er correct gebruik gemaakt wordt van deze service, omdat de updates blijven (lopen) tot u ze stopt. Verkeerd gebruik kan resulteren in een hoger verbruik. 
+
+
+\iffalse
+If you leave the significant-change location service running and your iOS app is subsequently suspended or terminated, the service automatically wakes up your app when new location data arrives. 
+
+At wake-up time, the app is put into the background and you are given a small amount of time (around 10 seconds) to manually restart location services and process the location data. (You must manually restart location services in the background before any pending location updates can be delivered, as described in Knowing When to Start Location Services.) Because your app is in the background, it must do minimal work and avoid any tasks (such as querying the network) that might prevent it from returning before the allocated time expires. 
+
+If it does not, your app will be terminated. If an iOS app needs more time to process the location data, it can request more background execution time using the beginBackgroundTaskWithName:expirationHandler: method of the UIApplication class.
+\fi
+
+
+\subsection{Region monitoring}
+\label{subsec: regionmonitoring}
+Het core location framework biedt twee manieren om te detecteren wanneer een gebruiker een specifiek gebied binnen of buiten komt: geographical region monitoring en beacon region monitoring. een geografische regio is een gebied bepaald door een cirkel met een specifieke diameter rond een bekend punt op aarde. Een beacon regio daarintegen is een gebied bepaald door de nabijheid van  Bleutooth low-energy beacons. Deze beacons zijn eigenlijk apparaten die een bepaald bluetooth low-energy payload uitzenden.
+
+\subsubsection{Geographical region monitoring}
+Geografische regio monitoring maakt gebruik van locatie services om het betreden en verlaten van gebieden te detecteren. Dit kan bevoorbeeld gebruikt worden om een waarschuwing of melding te genereren wanneer een gebruiker dichtbij een specifieke locaite komt. 
+
+\subsubsection{iBeacon}
+Beacon regio monitoring maakt gebruik van de ingebouwde radio van een iOS apparaat om te detecteren wanneer de gebruiker in de buurt is van een Bluetooth-low energy apparaat die iBeacon informatie uitzend. Dit kan dus ook gebruikt worden om meldingen of waarschuwingen te genereren wanneer de gebruiker zo een regio binnen of buiten komt. Omdat het niet wordt gedefinieerd door geografische coordinaten, worden bepaalde combinaties van waarden uitgezonden:
+
+\begin{enumerate}
+  \item Een proximity UUID (universal unique identifier / universele unieke identificatie), dit is een 128-bit waarde die uniek zijn voor beacons van een bepaald type of bepaalde organisatie.
+  \item Een 'major value' (grote waarde), is een 16-bit unsigned integer om gerelateerde beacons met de zelfde UUID te groeperen
+  \item Een 'minor value' (kleine waarde), ook een 16-bit unsigned integer maar deze is om beacons te ondersheiden die een zelfde UUID en major value hebben.
+\end{enumerate}
+
+Enkel de UUID waarde is verplicht, de major en minor value's zijn optioneel. Het is mogelijk om meerdere beacons in één bepaalde beacon regio te hebben. De app detecteerd de beacons in de regio, en aan de hand van de minor en major waarden kan achterhaald worden waar precies de gebruiker zich bevind in de regio.
+Apps kunnen ook de relatieve nabijheid van een of meerdere beacons bepalen a.d.h.v. de sterkte van de bleutooth low-energy signalen. De nauwkeurigheid van deze signalen kan sterk aangepast worden door muren, deuren en andere objecten, zelfs water, wat betekent dat een menselijk lichaam ook effect heeft op deze signalen.
+
+- UUID moet uniek zijn
+- iOS device als beacon, mogelijk dat er een kort moment is dat twee devices met zelfde UUID opgemerkt worden, komt omdat de bleutooth identifier van een iOS device verandert na een bepaalde periode voor privacy redenen (nuttig voor later?) 
+
+
+
+\subsection{Visits location service}
+\label{subsec: visitslocService}
+~\textcite{IosVisitsService} (is deze reference wel correct?)
+
+~\autocite{IosVisitsService}
+
+De 'visits location service' is de meest verbruiks-vriendelijke manier om locatie data op te halen. De service geeft enkel updates wanneer de bewegingen van de gebruiker opmerkelijk zijn. Elke update bevat 2 waarden, de locatie zelf en de tijd gespendeert op die locatie. Dit zorgt er voor dat deze service helemaal niet geschikt is voor navigatie, maar eerder om bepaalde patronen te identificeren in het gedrag van de gebruiker. requires always authorization
+
+
+
+
+\section{Android}
+\label{sec: android}
+~\autocite{AndroidLocationDev}
+~\autocite{GoogleLocDev}
+
+Android heeft een eigen location framework, maar wordt afgeraden om te gebruiken. In plaats daarvan wordt de Google location service, onderdeel van de google play services, aangeraden. Het biedt een simpelere API, betere nauwkeurigheid en veel meer. Enkel de google location service zal hier besproken worden.
+
+
+
+
+
+
+
+
+
+

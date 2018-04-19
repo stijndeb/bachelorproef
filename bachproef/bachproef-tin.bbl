@@ -19,6 +19,108 @@
 
 \refsection{0}
   \sortlist{apa}{apa}
+    \entry{AndroidLocationDev}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=e84e30b9390cdb64db6db2c9ab87846d}{Android}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{e84e30b9390cdb64db6db2c9ab87846d}
+      \strng{fullhash}{e84e30b9390cdb64db6db2c9ab87846d}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelyear}{2018}
+      \field{labelmonth}{04}
+      \field{labelday}{05}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{05}
+      \field{month}{04}
+      \field{title}{Location & Context}
+      \field{urlday}{05}
+      \field{urlmonth}{04}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://developer.android.com/training/location/index.html
+      \endverb
+    \endentry
+    \entry{IosLocFramework}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9f6290f4436e5a2351f12e03b6433c3c}{Apple}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{extrayear}{1}
+      \field{labelyear}{2018}
+      \field{labelmonth}{04}
+      \field{labelday}{05}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{05}
+      \field{month}{04}
+      \field{title}{Getting the user's location}
+      \field{urlday}{05}
+      \field{urlmonth}{04}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/CoreLocation/CoreLocation.html
+      \endverb
+    \endentry
+    \entry{IosVisitsService}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9f6290f4436e5a2351f12e03b6433c3c}{Apple}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{extrayear}{2}
+      \field{labelyear}{2018}
+      \field{labelmonth}{04}
+      \field{labelday}{05}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{05}
+      \field{month}{04}
+      \field{title}{Using the Visits location service}
+      \field{urlday}{05}
+      \field{urlmonth}{04}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://developer.apple.com/documentation/corelocation/getting_the_user_s_location/using_the_visits_location_service
+      \endverb
+    \endentry
+    \entry{GoogleLocDev}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelyear}{2018}
+      \field{labelmonth}{04}
+      \field{labelday}{05}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{05}
+      \field{month}{04}
+      \field{title}{Location interfaces, classes}
+      \field{urlday}{05}
+      \field{urlmonth}{04}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
+      \endverb
+    \endentry
     \entry{Yan2015}{inproceedings}{}
       \name{author}{5}{}{%
         {{uniquename=0,hash=e924b38f99b353bf0b0e1b3ed315654a}{Michalevsky}{M\bibinitperiod}{Yan}{Y\bibinitperiod}{}{}{}{}}%

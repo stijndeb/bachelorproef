@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.11.2)  5 MAR 2018 20:23
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.11.2)  18 MAR 2018 22:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -897,8 +897,6 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Missing character: There is no é in font phvr7t!
-
 
 ! LaTeX Error: There's no line here to end.
 
@@ -935,55 +933,67 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 3.
-
-Overfull \hbox (5.59pt too wide) in paragraph at lines 6--7
-\OT1/ptm/m/n/10 smartpho-nes heb-ben ook au-to-ma-ti-sche trac-king ser-vi-ces.
- Maar
- []
-
-
-Overfull \hbox (3.81058pt too wide) in paragraph at lines 6--7
-\OT1/ptm/m/n/10 een klein per-cen-tage van de men-sen we-ten dat hun smartphone
-
- []
-
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 21.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 21.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 27.
-[1
+(babel)             in language  on input line 26.
+ [1
 
 
 ]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 29.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 37.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 28.
 
-Overfull \hbox (0.61037pt too wide) in paragraph at lines 39--42
+Overfull \hbox (7.54033pt too wide) in paragraph at lines 33--36
+\OT1/ptm/m/n/10 hoe een smartphone ge-brui-ker be-paalde lo-ca-tie-ge-ba-seerde
+ dien-
+ []
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 40.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 40.
+
+Overfull \hbox (0.61037pt too wide) in paragraph at lines 42--44
 \OT1/ptm/m/n/10 De sys-te-men en me-tho-des zul-len zo goed mo-ge-lijk (mbv sch
 e-
  []
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 47.
 )
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 96.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 96.
 
-LaTeX Warning: Empty bibliography on input line 96.
+Overfull \hbox (27.48016pt too wide) in paragraph at lines 96--96
+\OT1/ptm/m/n/10 gen van [][]$https : / / www . usenix . org / conference / usen
+ixsecurity15 /
+ []
+
+
+Overfull \hbox (2.6372pt too wide) in paragraph at lines 96--96
+[][]\OT1/ptm/m/n/10 Phillips, A., Schroth, F., Pal-mer, G. M., Ziel-in-ski, S. 
+G., Smith,
+ []
+
+
+Overfull \hbox (16.25545pt too wide) in paragraph at lines 96--96
+\OT1/ptm/m/n/10 A. P. & Cun-ning-ham III, C. M. (2010, de-cem-ber). Location-
+ []
 
 
 AED: lastpage setting LastPage
@@ -1003,9 +1013,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 98.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 98.
-[2
-
-]
+[2]
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 98.
 Package babel Info: Redefining dutch shorthand "~
@@ -1020,12 +1028,12 @@ Package logreq Info: Writing requests to 'debacker_stijn_voorstel.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19660 strings out of 493706
- 306665 string characters out of 6145769
- 808817 words of memory out of 5000000
- 22781 multiletter control sequences out of 15000+600000
+ 19809 strings out of 493706
+ 309384 string characters out of 6145769
+ 809917 words of memory out of 5000000
+ 22930 multiletter control sequences out of 15000+600000
  37317 words of font info for 94 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 43i,15n,49p,850b,1602s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,15n,54p,1031b,1602s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on debacker_stijn_voorstel.pdf (2 pages).

@@ -2,10 +2,13 @@
 %% Inleiding
 %%=============================================================================
 
-\chapter*{Inleiding}
+\chapter{Inleiding}
 \label{ch:inleiding}
 
-De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
+Locatie tracking is een populaire feature in de smartphone wereld. Vele apps maken er gebruik van, maar de meeste smartphones hebben ook automatische tracking services. Enkel een klein percentage van smartphone gebruikers weten dat dit bestaat. Deze feature staat standaard aan, en het is niet evident om te vinden waar men dit kan uitzetten. De meeste mensen hebben helemaal geen idee hoe veel bepaalde bedrijven weten over hun locatie (en andere gegevens).
+
+
+\iffalse De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
 
 \begin{itemize}
   \item context, achtergrond
@@ -17,20 +20,52 @@ De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te
   \item \ldots
 \end{itemize}
 
+\fi
+
 \section{Probleemstelling}
 \label{sec:probleemstelling}
 
+\iffalse
 Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's,'' systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
+\fi
+
+kort verwoord:
+\begin{itemize}
+\item veel bedrijven hebben veel data over ons
+\item waaronder locatie gegevens, van zowel thuis, werk, hobby...
+\item mag dit allemaal bijgehouden worden?
+\item wat doen ze met deze data allemaal?
+\item is er een mogelijk om te achterhalen wat een bepaald bedrijf over "mij" weet
+\item kan ik deze data verwijderen? of de services uitzetten?
+
+\end{itemize}
 
 \section{Onderzoeksvraag}
 \label{sec:onderzoeksvraag}
 
+\iffalse
 Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
+\fi
+
+heel kort: wie weet wat over mijn locaties? en kan een gewone smartphone gebruiker daar iets aan doen?
+
 
 \section{Onderzoeksdoelstelling}
 \label{sec:onderzoeksdoelstelling}
 
+\iffalse
 Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk.
+\fi
+
+Het doel van dit onderzoek is om te bepalen wat bepaalde bedrijven doen met onze locatie gegevens doen.
+Daarnaast is het doel ook om een handige gids (in de vorm van een website, of artikel) te creëren die duidelijk uitleg geeft over:
+\begin{itemize}
+  \item wie weet wat over mijn locaties? (wie = bedrijf/organisatie)
+  \item wat doen ze met deze gegevens?
+  \item wat kan ik hier aan doen?
+  \item \ldots
+\end{itemize}
+
 
 \section{Opzet van deze bachelorproef}
 \label{sec:opzet-bachelorproef}
@@ -39,6 +74,7 @@ Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor suc
 % geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
 % die je kan aanvullen/aanpassen in functie van je eigen tekst.
 
+
 De rest van deze bachelorproef is als volgt opgebouwd:
 
 In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
@@ -46,6 +82,18 @@ In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand v
 In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
 
 % TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
+
+In hoofdstuk~\ref{ch:locatiegegevensbepalen} wordt uitgelegd hoe een programmeur de locatie data kan ophalen in zowel iOS als Android. Voorbeeld codes worden ook weergegeven.
+
+In hoofdstuk~\ref{ch:locatiebepalingtechnieken} wordt effectief uitgelegd hoe een locatie kan achterhaald worden. 
+
+In hoofdstuk~\ref{ch:opslaangebruiklocatiegegevens} wordt de privacy en gebruik van locatie gegevens in detail besproken voor bepaalde bedrijfen / bekende apps. 
+
+
+
+In hoofdstuk~\ref{ch:website} wordt de creatie van de gids uitgelegd, en hoe men zich kan beveiligen voor locatie data.
+
+
 
 In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
 

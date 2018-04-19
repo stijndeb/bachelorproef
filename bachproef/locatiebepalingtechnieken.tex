@@ -1,0 +1,227 @@
+\chapter{Locatie bepaling technieken}
+\label{ch:locatiebepalingtechnieken}
+In dit hoofdstuk worden de verschillende technieken om locaties te bepalen besproken.
+
+\section{Satelliet navigatie}
+\label{sec: sattelietnavigatie}
+satelliet navigatie of satnav
+systeem dat satellieten gebruikt voor autonome geografische positionering
+kleine elektronische ontvangers bepalen locatie met hoge preciesie door tijd signalen te verzenden (line of sight radio from satelliet)
+Een satelliet naviagite systeem dat wereldwijde dekking biedt is een GNSS (Global Navigation Satellite System).
+Momenteel zijn er 4 wereldwijde operationele GNSS's: GPS van de VSA, GLONASS van Rusland, BDS (BeiDou Navigation Satellite System) van China en Galileo van de Europese Unie. 
+
+
+\subsection{GPS}
+Het eerste satelliet navigatie systeem was Transit (ook bekend als NAVSAT of NNSS van Navy Navigation Satellite System), ontwikkeld in de jaren 60 door het leger van V.S.A. . Het maakte gebruik van het Doppler effect,
+Satellieten op bekende paden
+zonden signalen uit op bekende radiofrequentie
+de dan ontvangen signalen zullen lichtjes afwijken
+door beweging satelliet tov ontvanger
+door deze frequentie afwijking te monitoren over een korte tijd
+kan ontvanger loatie bepalen
+vele van deze metingen samen
++ de gekende baan van de satelliet
+kan een bepaalde positie bepalen.
+
+Dit systeem werd dan in 1996 vervangen door GPS (Global Positioning System) 
+
+GPS is gebaseerd op tijd en de gekende positie van gps satellieten. heel stabiele atomische clocken, synchronized met elkaar en de grond klokken. 
+verzenden continue data met huidige tijd en positie. GPS ontvanger (monitors) meerdere satellieten, en lost vergelijkingen op om de exacte locatie te bepalen, en de afwijking van de werkelijke tijd.
+Minimum 4 satellieten moeten in bereik zijn om zo de locatie en tijd te berekenen.
+
+elke gps satelliet broadcasts continually a signal:
+pseudo-random code, gekend door de ontvanger. de Time of arrival (TOA) van en bepaald punt, kan gevonden worden in de code, 
+A pseudorandom code (sequence of ones and zeros) that is known to the receiver. By time-aligning a receiver-generated version and the receiver-measured version of the code, the time of arrival (TOA) of a defined point in the code sequence, called an epoch, can be found in the receiver clock time scale
+
+Een message met de Time of Transmission (TOT) van de code tijdstip, en de positie van de satelliet op dat moment.
+
+De ontvanger berekent de TOA's  van de 4 satelliet signalen. Hiermee kan de ontvanger samen met de TOT's, 4 Time of Flight (TOF) waarden maken. Die zijn ongeveer gelijk aan de afstand tussen de ontvanger en satelliet (gegeven de snelheid van het light). Met al deze waarden kan de ontvanger dan zijn drie-dimesnionale positie berekenen, alsook de klok afwijking van de vier TOF's.
+
+De locatie van de ontvanger is meestal geconverteerd naar latitude, longitude en hoogte. Hoogte kan nog aangepast worden ten opzichte van het zee niveau
+
++ meer info (hoeveel satellieten, meer detail uitleg hoe alles werkt, 3 segmenten: space, control, user, selective availability) ..
+
+
+\subsection{GLONASS}
+GLONASS = GLObalnaja NAvigatsionnaja Spoetnikovaja Sistema ofwel wereldwijd navigatie satellietsysteem
+24 satellieten, 21 operationeel, 3 reserven
+
+sinds 1983 eerste satelliet operationeel. pas in december 1995 volledig in werking
+
+space - control - user segment
+
+werkingsprincipe is zelfde als GPS
+
+GPS alle satellieten zelfde frequentie
+GLONASS twee unieke frequenties voor elke satelliet (frequency division multiple access techniek)
+
+signaal:
+- navigatie bericht: boodschap, 50 bits per seconde
+	positie en snelheidsvectoren, ligging van satelliet te bepalen
+	frequentiegegevens + synchronisatiebits
+	almanak over de satellieten
+	verschil tussen GLONASS tijd en de klok van satelliet
+	leeftijd vd gegevens
+	
+- navigatie signalen: pseudo ranging code uitgezonden op tempo van 511 bits per seconde
+	SPS code (standard positioning service) civiele toepassingen
+	PPS code (precise positioning service) enkel militair gebruik
+	op frequentie L1 zowel SPS als PPS, op L2 enkel SPS
+	
+In 2014 is het Russische GLONASS naast het Amerikaanse GPS het enige werkzame navigatiesysteem. GLONASS wordt ondersteund door de meeste moderne navigatiesystemen, zowel in camera's en smartphones, als in voertuigen ingebouwde, als in handheld systemen
+
+\iffalse
+GLONASS engels wikipedia, receivers companies en smartphone comapanies die gebruik maken
+GLONASS nl wikipedia: vergelijking met anderee systemen
+\fi
+
+
+
+\subsection{BeiDou}
+Beidou navigatiesysteem, china wil onafhankelijk satellietnavigatiesysteem
+Beidou-1 en Beidou-2 (Compass)
+
+eerste gelanceerd in 2000
+
+satellieten van Beidou-1 zijn geostationair -> enkel gebied rond China, nog niet wereldwijd.
+dus ook maar 3 satellieten nodig
+
+Beidou-2 (Compass) in 2011, 10 satellieten, sinds 2012 in gebruik voor Asia-pacific regio
+
+2015 de Beidou-3, wereldwijd, sinds januari 2018 zijn er negen satellieten gelanceerd. in 2020 zal 35 satellieten en wereldwijd gebruik. verwacht dat het nauwkeuriger is dan GPS (zelfs milimeters) 
+
+
+\subsection{Galileo}
+Niet militair wereldwijd satellietnaviagtiesysteem, gebouwd door EU met Europese Ruimtevaartorganisatie (ESA)
+in 2016 opgestart met 18 satellieten
+in 2020 operationeel met 30 satellieten en voor iedereen gratis gebruik voor tijdsreferentie en plaatsbepaling.
+Is nauwkeuriger dan GPS
+bestaansreden: afhankelijkheid van VS
+zowel samen met gps en glonass als alleen gebruik
+
+beter dan GPS en GLONASS:
+	- betere pricisie
+	- betere dekking signalen op hogere geografische breedten (scandinavische landen)
+	- vergelijkbare techniek, 
+	- noodsignalen versturen
+	
+receivers:
+onder andere samsung galaxy S8, Moto X4, Apple iPhone 8 en X
+
+
+
+\subsection{Assisted GPS}
+GPS is goed, maar duurt lang. of helemaal niet als binnen of rond hoge gebouwen
+lange duur komt wanneer satelliet gevonden, eerst info waar satelliet gaat zijn volgende 4 uur, zodat phone het kan tracken
+
+Data kan nu ook verzonden worden via cellular of wifi network. veel sneller dan satelliet link
+zodat gps stratup time versneld
+
+bij smartphones wordt verbinding met de mobiele centrale gebruikt. zo kan telefoonmaatschappij een ruwe positiebepaling  toezenden die afgeleid is van metingen van de sterkte van het signaal van de mobiele telefoon, ontvangen door verschillende zendmasten. 
+
+Computers in een centrale meer complexe berekeningen laten doen
+
+ook kan wifi netwerk gebruikt worden 
+
+A-GPS alleen mogelijk als internet, of mobiele data is ingeschakeld. Zonder werkt A-GPS als een gewone GPS
+
+
+kan op twee manieren:
+- Mobile station based (MSB): informatie gebruikt om de satellieten vlugger te verkrijgen
+	orbital data of almanac van GPS satellieten naar de GPS ontvanger, zo kan ontvanger veel vlugger aan de satellieten koppelen
+	network can provide precise time
+- Mobile station Assisted (MSA): server kan positie berekenen van informatie gps receiver
+	ontvanger maakt snapshot van GPS signal, met exacte tijd, zo kan server later positite processen
+	assistance service heeft goed satellite signaal, en veel reken kracht, 
+	accurate, 
+
+\iffalse
+english wikipedia heeft uitlegjes
+\fi
+
+\subsection{Synthetic GPS}
+nog eens opzoeken, semi uitgelegd hierboven
+data centers of zelfs de phone. de voorspelling van locatie satellieten in x dagen of weken.
+phone can locatie bepalen in minder dan twee seconden
+
+
+\section{Cell ID}
+Base transciever station (BTS)
+het cellulair netwerk = veel radiocellen rondom de BTS.
+grootte vd cellen hangt af van bereik zender, en hoeveelheid verkeer, en aantal cellen
+cellen zijn uniek identificeerbaar en coördinaten vd cellen zijn bekend.
+wanneer iemand dichtbij een zender is, kan locatie bepaald worden adhv de zender.
+hoe kleiner de cellen, hoe nauwkeuriger.
+
+elke telefoon heeft dit sowieso ingebouwd, dus geen extra hardware of software nodig
+
+Enhanced Cell ID (beter opzoeken)
+sector antennes, cel opdelen in sectoren
+timing advance, meet de tijd die signaal nodig heeft om heen en weer tussen gsm en bts te gaan. dus afstand kan ongeveer berekend worden. ook signaalsterkte kan gebruikt worden. 
+
+
+\section{Wi-Fi}
+Wi-fi: draadloze korte afstand communicatie
+elke wifi access point (AP) heeft uniek nummer, BSSID (basic service set identifier) = MAC adres (Medium Access Control) vd AP. Iedere AP verstuurd periodiek zijn BSSID. Elke WiFi client kan een BSSID van een AP ontvangen.
+
+vooral RSSI (received signal strength indicator)
+
+
+
+
+\section{Inertial Sensors}
+Door gebruik van het kompas, de accelerometer en de gyroscoop in uw phone kan de locatie bepaald worden voor enkele minuten als er geen wireless systeem meer werkt.
+kompas voor de richting
+accelerometer hoe snel phone beweegt
+gyroscoop de draai bewegingen
+
+
+
+Handig voor in tunnel
+
+
+
+\section{Barometer}
+Vooral voor binnnen, om te bepalen welke verdieping
+lucht wordt dunner als je omhoog gaat
+
+
+\section{Ultrasonic}
+short range wireless systems
+RFID (radio frequency identification) with a badge
+checkpoints, maar erder voor betalingen
+
+
+
+
+\section{Bleutooth Beacons}
+apple beacon
+
+\section{Terrestrial Transmitters}
+GPS satellieten op de grond
+
+
+
+
+
+\iffalse
+- GPS 55
+- GLONASS 56
+- Galileo 57
+- Beidou/compass 58
+
+- Cellulair 59
+- Televisie 60
+- Infrarood 61
+- RFID 64
+- Ultrasound 67
+- short range wireless 69
+	- Wi-fi 70
+	- Bleutooth 72
+	- UWB 75
+	- Zigbee 76
+	
+ Some GPS receivers may use additional clues or assumptions such as reusing the last known altitude, dead reckoning, inertial navigation, or including information from the vehicle computer, to give a (possibly degraded) position when fewer than four satellites are visible.
+
+\fi
+
